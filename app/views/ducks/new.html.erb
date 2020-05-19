@@ -14,7 +14,7 @@
 <%= f.text_field :description %>
 
 <%= f.label :student_id, "Student ID" %>
-<%= f.number_field :student_id %>
+<%= f.collection_select :student_id, Student.all, :id, :name %>
 
 <%= submit_tag "Create Duck" %>
 <% end %>
